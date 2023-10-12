@@ -102,7 +102,7 @@ jobs:
         with:
           builder: ${{ steps.buildx.outputs.name }}
           context: ./app/
-          push: ${{ github.event_name != 'pull_request' }}
+          push: ${{ github.event_name == 'pull_request' }}
           file: ./app/Dockerfile.${{ matrix.dockerfile }}
           platforms: ${{ steps.image_type.outputs.platforms }}
           build-args: BUILD=${{ steps.meta.outputs.VERSION }}
