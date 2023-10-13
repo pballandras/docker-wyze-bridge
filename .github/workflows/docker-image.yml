@@ -31,7 +31,7 @@ jobs:
 
     strategy:
       matrix:
-        dockerfile: ["multiarch", "hwaccel", "qsv"]
+        dockerfile: ["multiarch"] #, "hwaccel", "qsv"]
 
     steps:
       - name: Checkout repository
