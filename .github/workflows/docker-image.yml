@@ -113,7 +113,7 @@ jobs:
             io.hass.version=${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
             io.hass.type=addon
             io.hass.arch=${{ steps.image_type.outputs.arch }}
-          tags: testing,pballandras
+          tags: itsthestory/testing
           cache-from: type=gha,scope=${{ matrix.dockerfile }}
           cache-to: type=gha,mode=max,scope=${{ matrix.dockerfile }}
           provenance: false
